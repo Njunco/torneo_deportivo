@@ -1,0 +1,38 @@
+// Creación de la base de datos
+use torneo_deportivo;
+
+// Creación de las colecciones
+db.createCollection("deportistas");
+db.createCollection("equipos");
+db.createCollection("entrenadores");
+db.createCollection("arbitros");
+db.createCollection("encuentros");
+db.createCollection("resultados");
+db.createCollection("posiciones");
+
+// Inserción de datos en Equipos
+db.equipos.insertMany([
+    { _id: "arg", nombre: "Argentina" },
+    { _id: "bra", nombre: "Brasil" },
+    { _id: "col", nombre: "Colombia" },
+    { _id: "chi", nombre: "Chile" },
+    { _id: "uru", nombre: "Uruguay" },
+    { _id: "par", nombre: "Paraguay" }
+    // Otros equipos...
+]);
+
+// Inserción de datos en Encuentros Deportivos
+db.encuentros.insertMany([
+    { _id: 1, fechaHora: ISODate("2023-01-15T20:00:00Z"), lugar: "Estadio Nacional", tipoDeporte: "Fútbol", torneo: "Eliminatorias Suramérica 2023", fase: "Grupo A", equipos: ["arg", "bra"], arbitro: 1, estado: "Programado" },
+    { _id: 2, fechaHora: ISODate("2023-01-16T18:30:00Z"), lugar: "Estadio Maracaná", tipoDeporte: "Fútbol", torneo: "Eliminatorias Suramérica 2023", fase: "Grupo B", equipos: ["col", "chi"], arbitro: 2, estado: "En Curso" },
+    { _id: 3, fechaHora: ISODate("2023-01-17T21:15:00Z"), lugar: "Estadio Centenario", tipoDeporte: "Fútbol", torneo: "Eliminatorias Suramérica 2023", fase: "Grupo C", equipos: ["uru", "par"], arbitro: 3, estado: "Finalizado" },
+    // Otros encuentros...
+]);
+
+// Inserción de datos en Resultados
+db.resultados.insertMany([
+    { _id: 1, encuentro: 1, goles: { "arg": 2, "bra": 2 }, tarjetas: { "arg": { amarillas: 2, rojas: 0 }, "bra": { amarillas: 1, rojas: 0 } } },
+    { _id: 2, encuentro: 2, goles: { "col": 1, "chi": 0 }, tarjetas: { "col": { amarillas: 1, rojas: 0 }, "chi": { amarillas: 1, rojas: 0 } } },
+    { _id: 3, encuentro: 3, goles: { "uru": 3, "par": 1 }, tarjetas: { "uru": { amarillas: 2, rojas: 0 }, "par": { amarillas: 3, rojas: 1 } } },
+    // Otros resultados...
+]);
