@@ -1,12 +1,12 @@
 // Creación de la base de datos
-use torneo_deportivo;
+use torneo_futbol;
 
 // Creación de las colecciones
 db.createCollection("deportistas");
 db.createCollection("equipos");
 db.createCollection("entrenadores");
 db.createCollection("arbitros");
-db.createCollection("encuentros");
+db.createCollection("encuentros_deportivos");
 db.createCollection("resultados");
 db.createCollection("posiciones");
 
@@ -21,11 +21,32 @@ db.equipos.insertMany([
     // Otros equipos...
 ]);
 
+// Inserción de datos en Deportistas
+db.deportistas.insertMany([
+    { _id: 1, nombre: "Lionel", apellido: "Messi", fecha_nacimiento: ISODate("1987-06-24T00:00:00Z"), posicion: "Delantero", equipo: "arg", goles: 5, tarjetas_amarillas: 1, tarjetas_rojas: 0 },
+    { _id: 2, nombre: "Neymar", apellido: "Jr", fecha_nacimiento: ISODate("1992-02-05T00:00:00Z"), posicion: "Delantero", equipo: "bra", goles: 3, tarjetas_amarillas: 2, tarjetas_rojas: 0 }
+    // Otros deportistas...
+]);
+
+// Inserción de datos en Entrenadores
+db.entrenadores.insertMany([
+    { _id: 1, nombre: "Lionel", apellido: "Scaloni", fecha_nacimiento: ISODate("1978-05-16T00:00:00Z"), equipo: "arg" },
+    { _id: 2, nombre: "Tite", apellido: "Bacchi", fecha_nacimiento: ISODate("1961-05-25T00:00:00Z"), equipo: "bra" }
+    // Otros entrenadores...
+]);
+
+// Inserción de datos en Árbitros
+db.arbitros.insertMany([
+    { _id: 1, nombre: "Néstor", apellido: "Pitana", partidos_dirigidos: 20, tarjetas_amarillas: 50, tarjetas_rojas: 5 },
+    { _id: 2, nombre: "Sandro", apellido: "Ricci", partidos_dirigidos: 15, tarjetas_amarillas: 40, tarjetas_rojas: 3 }
+    // Otros árbitros...
+]);
+
 // Inserción de datos en Encuentros Deportivos
-db.encuentros.insertMany([
-    { _id: 1, fechaHora: ISODate("2023-01-15T20:00:00Z"), lugar: "Estadio Nacional", tipoDeporte: "Fútbol", torneo: "Eliminatorias Suramérica 2023", fase: "Grupo A", equipos: ["arg", "bra"], arbitro: 1, estado: "Programado" },
-    { _id: 2, fechaHora: ISODate("2023-01-16T18:30:00Z"), lugar: "Estadio Maracaná", tipoDeporte: "Fútbol", torneo: "Eliminatorias Suramérica 2023", fase: "Grupo B", equipos: ["col", "chi"], arbitro: 2, estado: "En Curso" },
-    { _id: 3, fechaHora: ISODate("2023-01-17T21:15:00Z"), lugar: "Estadio Centenario", tipoDeporte: "Fútbol", torneo: "Eliminatorias Suramérica 2023", fase: "Grupo C", equipos: ["uru", "par"], arbitro: 3, estado: "Finalizado" },
+db.encuentros_deportivos.insertMany([
+    { _id: 1, fecha_hora: ISODate("2024-06-15T20:00:00Z"), lugar: "Estadio Nacional", equipos: ["arg", "bra"], arbitro: 1, estado: "Programado" },
+    { _id: 2, fecha_hora: ISODate("2024-06-16T18:30:00Z"), lugar: "Estadio Maracaná", equipos: ["col", "chi"], arbitro: 2, estado: "En Curso" },
+    { _id: 3, fecha_hora: ISODate("2024-06-17T21:15:00Z"), lugar: "Estadio Centenario", equipos: ["uru", "par"], arbitro: 3, estado: "Finalizado" }
     // Otros encuentros...
 ]);
 
@@ -33,6 +54,10 @@ db.encuentros.insertMany([
 db.resultados.insertMany([
     { _id: 1, encuentro: 1, goles: { "arg": 2, "bra": 2 }, tarjetas: { "arg": { amarillas: 2, rojas: 0 }, "bra": { amarillas: 1, rojas: 0 } } },
     { _id: 2, encuentro: 2, goles: { "col": 1, "chi": 0 }, tarjetas: { "col": { amarillas: 1, rojas: 0 }, "chi": { amarillas: 1, rojas: 0 } } },
-    { _id: 3, encuentro: 3, goles: { "uru": 3, "par": 1 }, tarjetas: { "uru": { amarillas: 2, rojas: 0 }, "par": { amarillas: 3, rojas: 1 } } },
+    { _id: 3, encuentro: 3, goles: { "uru": 3, "par": 1 }, tarjetas: { "uru": { amarillas: 2, rojas: 0 }, "par": { amarillas: 3, rojas: 1 } } }
     // Otros resultados...
 ]);
+
+// Inserción de datos en Posiciones
+db.posiciones.insertMany([
+    { _id: "arg", equipo: "Argentina",
