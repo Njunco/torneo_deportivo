@@ -1,7 +1,8 @@
 Requerimientos No Funcionales
 
+![image](https://github.com/Njunco/torneo_deportivo/assets/169322219/2c9f86a3-79aa-4e71-9ba6-da556da2f203)
 
-Actividad 2/Imagenes actividad2/Screenshot (3).png
+
 11. Introducción
 
 Este documento establece los requisitos no funcionales para el Sistema de Gestión para Torneos de Fútbol. El enfoque se centra en garantizar la redundancia y disponibilidad del sistema para mantener un rendimiento óptimo y continuo durante las operaciones del torneo.
