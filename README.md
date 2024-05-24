@@ -1,14 +1,15 @@
-# Documento de Requerimientos: Sistema de Gestión para Torneos Deportivos
+# Documento de Requerimientos: Sistema de Gestión para Torneos de Fútbol
 
 # 1.Introducción:
 
-+ El propósito de este sistema es gestionar la información relacionada con los participantes en un evento deportivo de torneos en Sudamérica. Se debe diseñar una base de datos MongoDB que contemple las siguientes colecciones: deportistas, equipos, entrenadores, árbitros, encuentros deportivos, resultados y posiciones.
++ El propósito de este sistema es gestionar la información relacionada con los participantes en un torneo de fútbol en Sudamérica. Se debe diseñar una base de datos MongoDB que contemple las siguientes colecciones: deportistas, equipos, entrenadores, árbitros, encuentros deportivos, resultados y posiciones.
 Deportistas:
 Cada deportista debe tener un identificador único, nombre, apellido, fecha de nacimiento, posición en el campo, equipo al que pertenece y estadísticas relevantes (goles marcados, tarjetas recibidas, etc.). Se debe garantizar que un deportista no pueda participar en más de un equipo durante el torneo.
 
 # 2.Equipos:
 + Cada equipo debe tener un identificador único, nombre y detalles adicionales según sea necesario en el contexto del torneo (país, ciudad, etc.).
 
++ 
 # 3.Entrenadores:
 + Cada entrenador debe tener un identificador único, nombre, apellido, fecha de nacimiento y equipo al que pertenece. No puede haber dos entrenadores con el mismo identificador.
 
