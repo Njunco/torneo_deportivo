@@ -1,8 +1,5 @@
 Requerimientos No Funcionales
 
-![image](https://github.com/Njunco/torneo_deportivo/blob/main/Actividad%202/Imagenes%20actividad2/Screenshot%20(3).png).
-
-
 11. Introducción
 
 Este documento establece los requisitos no funcionales para el Sistema de Gestión para Torneos de Fútbol. El enfoque se centra en garantizar la redundancia y disponibilidad del sistema para mantener un rendimiento óptimo y continuo durante las operaciones del torneo.
@@ -53,11 +50,21 @@ Configuración y Comandos
 
 Configuración Inicial en el Nodo Principal:
 
-
-
 Inicialización del Conjunto de Replicación:
 
 Conéctate al nodo principal utilizando el shell de MongoDB:
+
+![image](https://github.com/Njunco/torneo_deportivo/blob/main/Actividad%202/Imagenes%20actividad2/Screenshot%20(3).png).
+
+Ejecuta el siguiente comando para iniciar el conjunto de replicación:
+
+![image](https://github.com/Njunco/torneo_deportivo/blob/main/Actividad%202/Imagenes%20actividad2/Screenshot%20(4).png).
+
+Esto crea un conjunto de replicación llamado "rs0" con tres nodos.
+
+Verificación del Estado del Conjunto de Replicación:
+
+![image](https://github.com/Njunco/torneo_deportivo/blob/main/Actividad%202/Imagenes%20actividad2/Screenshot%20(5).png).
 
 Este comando mostrará el estado del conjunto de replicación. Asegúrate de que todos los nodos estén en estado "PRIMARY" o "SECONDARY" según corresponda.
 
@@ -104,5 +111,4 @@ Se recibe un objeto de configuración del conjunto de replicación sin errores.
 2.3 Verificación del Estado del Conjunto de Replicación
 
 **Caso de Prueba 3: Estado del Conjunto de Rep
-
 
