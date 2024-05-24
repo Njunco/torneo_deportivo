@@ -1,4 +1,4 @@
-![image](https://github.com/Njunco/torneo_deportivo/assets/169322219/826454dd-a874-40fd-9296-7e0d2de07fa5)Requerimientos No Funcionales
+Requerimientos No Funcionales
 
 11. Introducción
 
