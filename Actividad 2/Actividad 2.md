@@ -97,9 +97,9 @@ Este documento establece los casos de prueba para verificar la correcta implemen
 + El servidor se inicia sin errores y está escuchando en el puerto 27017.
 # 2.2 Verificación de la Inicialización del Conjunto de Replicación
 
-# Caso de Prueba 2: Inicialización del Conjunto de Replicación
++ Caso de Prueba 2: Inicialización del Conjunto de Replicación
 
-# Objetivo: Verificar que la inicialización del conjunto de replicación se realiza correctamente.
++ Objetivo: Verificar que la inicialización del conjunto de replicación se realiza correctamente.
 
 # Pasos:
 
