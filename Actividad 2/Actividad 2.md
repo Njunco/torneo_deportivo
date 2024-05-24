@@ -1,5 +1,5 @@
 Requerimientos No Funcionales
-
+Actividad 2/Imagenes actividad2/Screenshot (3).png
 11. Introducción
 
 Este documento establece los requisitos no funcionales para el Sistema de Gestión para Torneos de Fútbol. El enfoque se centra en garantizar la redundancia y disponibilidad del sistema para mantener un rendimiento óptimo y continuo durante las operaciones del torneo.
