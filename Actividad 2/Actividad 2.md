@@ -50,7 +50,7 @@ Configuración y Comandos
 
 Configuración Inicial en el Nodo Principal:
 
-Screenshot (3).png
+
 
 Inicialización del Conjunto de Replicación:
 
