@@ -1,6 +1,6 @@
 Requerimientos No Funcionales
 
-![image](Actividad 2/Imagenes actividad2/Screenshot (3).png)
+![image](https://github.com/Njunco/torneo_deportivo/blob/main/Actividad%202/Imagenes%20actividad2/Screenshot%20(3).png).
 
 
 11. Introducción
