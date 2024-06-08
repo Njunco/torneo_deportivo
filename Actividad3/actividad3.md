@@ -38,8 +38,8 @@ El sistema debe estar disponible las 24 horas del día, los 7 días de la semana
 # 4.1 Configurar los Servidores de Configuración (Config Servers)
 
 + Iniciar los servidores de configuración:
-
+```
 mongod --configsvr --replSet rsConfig --dbpath /data/configdb1 --port 27019
 mongod --configsvr --replSet rsConfig --dbpath /data/configdb2 --port 27020
 mongod --configsvr --replSet rsConfig --dbpath /data/configdb3 --port 27021
-
+```
