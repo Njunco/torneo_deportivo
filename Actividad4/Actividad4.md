@@ -23,7 +23,7 @@ Verificación de la Configuración Inicial del Sharding
   
 2. Verificación de la Funcionalidad del Sharding
 
-+ Caso de Prueba 3: Agregar y Consultar Datos en una Colección Shardeada
+# Caso de Prueba 3: Agregar y Consultar Datos en una Colección Shardeada
 
 + Objetivo: Verificar que se pueden agregar y consultar datos en una colección shardeada.
 + Pasos:
@@ -40,7 +40,7 @@ Verificación de la Configuración Inicial del Sharding
 + Resultado Esperado: Los datos deben estar distribuidos equitativamente entre los shards.
 3. Verificación de la Redundancia y Disponibilidad
 
-+ Caso de Prueba 5: Failover de Shards
+# Caso de Prueba 5: Failover de Shards
 
 + Objetivo: Verificar que el sistema puede manejar fallos en un shard.
 + Pasos:
