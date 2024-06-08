@@ -104,4 +104,27 @@ rs.initiate(
 )
 ```
 
+# 4.3 Configurar los Routers Mongos
++ 1.Iniciar los routers mongos:
+```
+mongos --configdb rsConfig/localhost:27019,localhost:27020,localhost:27021 --port 27017
+
+```
++ 2.Conectar a mongos y configurar el sharding:
+```
+mongo --host localhost --port 27017
+
+sh.addShard("shard1/localhost:27001")
+sh.addShard("shard2/localhost:27002")
+sh.addShard("shard3/localhost:27003")
+
+sh.enableSharding("torneo_futbol")
+
+// Definir la clave de shard para cada colección
+sh.shardCollection("torneo_futbol.deportistas", { "equipo": 1 })
+sh.shardCollection("torneo_futbol.encuentros_deportivos", { "equipos": 1 })
+sh.shardCollection("torneo_futbol.resultados", { "encuentro": 1 })
+```
+
+
 
