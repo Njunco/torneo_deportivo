@@ -128,22 +128,27 @@ Caso de Prueba 1: Estado de los Servidores de Configuración
 
 + Resultado: Todos los servidores de configuración están en estado "PRIMARY" o "SECONDARY".
 + Análisis: La configuración inicial de los servidores de configuración es correcta.
+  
 Caso de Prueba 2: Estado de los Shards
 
 + Resultado: Todos los servidores de shard están en estado "PRIMARY" o "SECONDARY".
 + Análisis: La configuración inicial de los shards es correcta.
+  
 Caso de Prueba 3: Agregar y Consultar Datos en una Colección Shardeada
 
 + Resultado: El documento se inserta y recupera correctamente.
 + Análisis: La funcionalidad básica de sharding está funcionando correctamente.
+  
 Caso de Prueba 4: Balanceo de Carga
 
 + Resultado: Los datos están distribuidos equitativamente entre los shards.
 + Análisis: El balanceo de carga está funcionando correctamente.
+  
 Caso de Prueba 5: Failover de Shards
 
 + Resultado: Otro nodo asume el rol de primario sin pérdida de datos.
 + Análisis: El sistema maneja correctamente el failover de shards.
+  
 Caso de Prueba 6: Failover de Config Servers
 
 + Resultado: El sistema sigue funcionando sin interrupciones.
