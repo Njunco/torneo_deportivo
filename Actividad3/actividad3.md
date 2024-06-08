@@ -3,24 +3,24 @@
 # 1. Introducción
 + Este documento establece los requerimientos no funcionales y la estrategia de particionamiento (sharding) para el Sistema de Gestión para Torneos de Fútbol en Sudamérica, garantizando redundancia y disponibilidad 24x7.
 
-2. Escenario de Particionamiento (Sharding)
-El particionamiento o sharding es necesario en el escenario donde el sistema debe manejar una gran cantidad de datos relacionados con los deportistas, equipos, encuentros deportivos y resultados. Debido a la alta concurrencia y volumen de datos esperados durante el torneo, es crucial distribuir la carga entre varios nodos para garantizar:
+# 2. Escenario de Particionamiento (Sharding)
++ El particionamiento o sharding es necesario en el escenario donde el sistema debe manejar una gran cantidad de datos relacionados con los deportistas, equipos, encuentros deportivos y resultados. Debido a la alta concurrencia y volumen de datos esperados durante el torneo, es crucial distribuir la carga entre varios nodos para garantizar:
 
-Alta disponibilidad y continuidad del servicio.
-Redundancia y recuperación ante desastres.
-Mejora en la capacidad de respuesta y distribución de carga.
-3. Requerimientos No Funcionales
-3.1 Redundancia
-Descripción:
-El sistema debe configurarse con redundancia para asegurar la continuidad del servicio.
+# Alta disponibilidad y continuidad del servicio.
++ Redundancia y recuperación ante desastres.
++ Mejora en la capacidad de respuesta y distribución de carga.
+# 3. Requerimientos No Funcionales
+# 3.1 Redundancia
++ Descripción:
++ El sistema debe configurarse con redundancia para asegurar la continuidad del servicio.
 
-Criterios de Calidad:
+# Criterios de Calidad:
 
-Alta Disponibilidad: Mantener una disponibilidad del 99.9% o superior.
-Replicación de Datos: Implementar replicación de datos en al menos tres nodos distribuidos geográficamente.
-Balanceo de Carga: Distribuir eficientemente las solicitudes entre los servidores.
-Monitorización Continua: Identificar y abordar proactivamente cualquier punto único de fallo.
-3.2 Disponibilidad 24x7
++ Alta Disponibilidad: Mantener una disponibilidad del 99.9% o superior.
++ Replicación de Datos: Implementar replicación de datos en al menos tres nodos distribuidos geográficamente.
++ Balanceo de Carga: Distribuir eficientemente las solicitudes entre los servidores.
++ Monitorización Continua: Identificar y abordar proactivamente cualquier punto único de fallo.
++ 3.2 Disponibilidad 24x7
 Descripción:
 El sistema debe estar disponible las 24 horas del día, los 7 días de la semana.
 
