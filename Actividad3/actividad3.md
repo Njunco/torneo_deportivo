@@ -24,20 +24,20 @@
 Descripción:
 El sistema debe estar disponible las 24 horas del día, los 7 días de la semana.
 
-Criterios de Calidad:
+# Criterios de Calidad:
 
-Mantenimiento Programado: Minimizar las ventanas de mantenimiento, programándolas durante horas de baja actividad.
-Respaldo Automático: Realizar respaldos automáticos de la base de datos al menos una vez al día.
-Detección y Recuperación Automática: Equipar el sistema con mecanismos de detección y recuperación automática de fallos.
-4. Estrategia de Particionamiento Horizontal (Sharding)
-Definición de la Estrategia de Particionamiento:
-La estrategia de particionamiento se basará en la clave equipo para distribuir uniformemente los datos. Este enfoque se elige para balancear la carga y mejorar el rendimiento de consultas específicas sobre equipos.
++ Mantenimiento Programado: Minimizar las ventanas de mantenimiento, programándolas durante horas de baja actividad.
++ Respaldo Automático: Realizar respaldos automáticos de la base de datos al menos una vez al día.
++ Detección y Recuperación Automática: Equipar el sistema con mecanismos de detección y recuperación automática de fallos.
+# 4. Estrategia de Particionamiento Horizontal (Sharding)
++ Definición de la Estrategia de Particionamiento:
++ La estrategia de particionamiento se basará en la clave equipo para distribuir uniformemente los datos. Este enfoque se elige para balancear la carga y mejorar el rendimiento de consultas específicas sobre equipos.
 
-Pasos para Configurar el Sharding:
+# Pasos para Configurar el Sharding:
 
-4.1 Configurar los Servidores de Configuración (Config Servers)
+# 4.1 Configurar los Servidores de Configuración (Config Servers)
 
-Iniciar los servidores de configuración:
++ Iniciar los servidores de configuración:
 
 mongod --configsvr --replSet rsConfig --dbpath /data/configdb1 --port 27019
 mongod --configsvr --replSet rsConfig --dbpath /data/configdb2 --port 27020
