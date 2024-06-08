@@ -59,4 +59,49 @@ rs.initiate(
   }
 )
 ```
+# 4.2 Configurar los Servidores de Shard
+
++ 1.Iniciar los servidores de shard:
+```
+mongod --shardsvr --replSet shard1 --dbpath /data/shard1 --port 27001
+mongod --shardsvr --replSet shard2 --dbpath /data/shard2 --port 27002
+mongod --shardsvr --replSet shard3 --dbpath /data/shard3 --port 27003
+```
+
++ 2.Inicializar los conjuntos de replicación para cada shard:
+```
+mongo --port 27001
+
+rs.initiate(
+  {
+    _id: "shard1",
+    members: [
+      { _id: 0, host: "localhost:27001" }
+    ]
+  }
+)
+
+mongo --port 27002
+
+rs.initiate(
+  {
+    _id: "shard2",
+    members: [
+      { _id: 0, host: "localhost:27002" }
+    ]
+  }
+)
+
+mongo --port 27003
+
+rs.initiate(
+  {
+    _id: "shard3",
+    members: [
+      { _id: 0, host: "localhost:27003" }
+    ]
+  }
+)
+```
+
 
