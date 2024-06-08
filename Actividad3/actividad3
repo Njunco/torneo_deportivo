@@ -1,5 +1,6 @@
+
 # Documento de Requerimientos No Funcionales y Estrategia de Particionamiento
-+ 1. Introducción
+# 1. Introducción
 + Este documento establece los requerimientos no funcionales y la estrategia de particionamiento (sharding) para el Sistema de Gestión para Torneos de Fútbol en Sudamérica, garantizando redundancia y disponibilidad 24x7.
 
 2. Escenario de Particionamiento (Sharding)
