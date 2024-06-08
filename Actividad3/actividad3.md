@@ -43,3 +43,20 @@ mongod --configsvr --replSet rsConfig --dbpath /data/configdb1 --port 27019
 mongod --configsvr --replSet rsConfig --dbpath /data/configdb2 --port 27020
 mongod --configsvr --replSet rsConfig --dbpath /data/configdb3 --port 27021
 ```
++ 2.Inicializar el conjunto de replicación para los servidores de configuración:
+```
+mongo --port 27019
+
+rs.initiate(
+  {
+    _id: "rsConfig",
+    configsvr: true,
+    members: [
+      { _id: 0, host: "localhost:27019" },
+      { _id: 1, host: "localhost:27020" },
+      { _id: 2, host: "localhost:27021" }
+    ]
+  }
+)
+```
+
